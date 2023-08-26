@@ -24,6 +24,14 @@ const FollowMouse = () => {
     };
   }, [enabled]);
 
+  useEffect(() => { 
+    // document.body.classList.toggle('no-cursor', enabled);
+
+    return () => { 
+      document.body.classList.remove('no-cursor');
+    }
+  }, [enabled]);
+
   let styleBolita = {
     position: "absolute",
     backgroundColor: "rgb(0, 0, 0, 0.5)",
